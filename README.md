@@ -2,11 +2,19 @@
 
 This guide provides instructions on how to deploy and manage applications using Kubernetes covering only the essential steps.
 
+---
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Project Structure Setup](#project-structure-setup)
-- ...
+- [Prepare the Application Image](#prepare-the-application-image)
+- [Deploy Application with Kubernetes](#deploy-application-with-kubernetes)
+    - [Set Up Kubernetes Cluster](#set-up-kubernetes-cluster)
+    - [Deploy Image to Kubernetes](#deploy-image-to-kubernetes)
+    - [Access the Application](#access-the-application)
+
+---
 
 ### Prerequisites
 
@@ -14,6 +22,8 @@ This guide provides instructions on how to deploy and manage applications using 
 2. Set up a Docker Hub account.
 3. Install kubectl.
 4. Install Minikube (or set up access to a managed Kubernetes service).
+
+---
 
 ### Project Structure Setup
 
@@ -34,8 +44,18 @@ This guide provides instructions on how to deploy and manage applications using 
     └── docker/          # Docker-related files
         └── application/ # Dockerfile for the application
     ```
-3. Create the **`application.py`** file inside the **`quickstart_docker/application`** directory.
-4. Copy and paste the following code in the **`application.py`** file:
+
+---
+
+### Prepare the Application Image
+
+To prepare an application image and then deploy it with Kubernetes, follow these steps:
+
+1. Ensure your application is inside the **`quickstart_docker/application`** directory.
+<!-- Validate location with developer -->
+
+2. Create the **`application.py`** file inside the **`quickstart_docker/application`** directory.
+3. Copy and paste the following code in the **`application.py`** file:
 
     ```python
     import http.server
@@ -52,12 +72,12 @@ This guide provides instructions on how to deploy and manage applications using 
 
     ```
 
-5. Create a pre-built image from Docker Hubhe that contains Python, an operating system, and the required dependencies for your application environment:
+4. Create a pre-built image from Docker Hubhe that contains Python, an operating system, and the required dependencies for your application environment:
 
     1. Create the **`Dockerfile`** inside the **`quickstart_docker/docker/application`** directory.
     2. Copy and paste the following code in the **`Dockerfile`** file:
 
-    ```
+    ```dockerfile
     # Use a base image from Docker Hub
     FROM python:3.5
 
@@ -113,3 +133,21 @@ This guide provides instructions on how to deploy and manage applications using 
         </td>
     </tr>
 </table>
+
+---
+
+### Deploy Application with Kubernetes
+
+To deploy an application with Kubernetes, follow the steps in these subsections.
+- [Set Up Kubernetes Cluster](#set-up-kubernetes-cluster)
+- [Deploy Image to Kubernetes](#deploy-image-to-kubernetes)
+- [Access the Application](#access-the-application)
+
+#### Set Up Kubernetes Cluster
+WIP
+
+#### Deploy Image to Kubernetes
+WIP
+
+#### Access the Application
+WIP
