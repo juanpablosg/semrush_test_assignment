@@ -72,7 +72,7 @@ To prepare an application image and then deploy it with Kubernetes, follow these
 
     ```
 
-4. Create a pre-built image from Docker Hubhe that contains Python, an operating system, and the required dependencies for your application environment:
+4. Create a pre-built image from Docker Hub that contains Python, an operating system, and the required dependencies for your application environment, as follows:
 
     1. Create the **`Dockerfile`** inside the **`quickstart_docker/docker/application`** directory.
     2. Copy and paste the following code in the **`Dockerfile`** file:
